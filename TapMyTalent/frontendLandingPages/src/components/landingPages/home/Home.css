@@ -1,0 +1,5 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    /* No padding needed since elements are in normal flow */
+}

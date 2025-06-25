@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.org-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  font-family: 'Outfit', sans-serif;
+}
+
+.org-auth-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-logo-container {
+  text-align: center;
+}
+
+.org-logo {
+  width: 60px;
+  height: auto;
+}
+
+.org-auth-card h1 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.org-welcome-text {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.org-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #F5F5F5;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.org-select:focus {
+  border-color: #E66868;
+}
+
+/* Custom select styling */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.org-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.google-btn img {
+  margin-right: 10px;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.org-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  color: #999;
+  font-size: 12px;
+}
+
+.org-divider::before,
+.org-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.org-divider span {
+  padding: 0 10px;
+}
+
+.org-forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.org-forgot-password a {
+  color: #E66868;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.org-forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.org-submit-btn {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #E66868;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.org-submit-btn:hover {
+  background-color: #d45555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .org-auth-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .org-auth-container {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  .org-auth-card {
+    padding: 25px 15px;
+  }
+  
+  .org-logo {
+    width: 50px;
+  }
+  
+  .org-auth-card h1 {
+    font-size: 24px;
+  }
+  
+  .org-welcome-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group input,
+  .org-select,
+  .google-btn,
+  .org-submit-btn {
+    padding: 10px;
+  }
+  
+  .google-btn,
+  .org-submit-btn {
+    font-size: 14px;
+  }
+}
+
+/* For very small screens */
+@media (max-height: 600px) {
+  .org-auth-container {
+    padding-top: 10px;
+  }
+  
+  .org-auth-card {
+    padding: 20px 15px;
+  }
+  
+  .org-logo {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .org-welcome-text {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .org-divider {
+    margin: 15px 0;
+  }
+  
+  .org-forgot-password {
+    margin-bottom: 15px;
+  }
+}

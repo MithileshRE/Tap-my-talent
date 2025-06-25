@@ -1,0 +1,245 @@
+/* HomeHowWeWork Section Styles */
+.how-we-work-section {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.how-we-work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Process Steps at the top */
+.how-we-work-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px; /* Increased bottom margin */
+  width: 100%;
+  padding: 0 20px; /* Added padding for better spacing */
+  gap: 0; /* Remove any default gap */
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 180px; /* Fixed width */
+}
+
+.process-icon {
+  width: 85px; /* Increased size */
+  height: 85px; /* Increased size */
+  background-color: #e76565;
+  border-radius: 18px; /* Slightly larger border radius */
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Increased bottom margin */
+  box-shadow: 0 4px 12px rgba(231, 101, 101, 0.3); /* Added subtle shadow */
+}
+
+.process-icon img {
+  width: 48px; /* Increased size */
+  height: 48px; /* Increased size */
+  transform: rotate(-45deg);
+}
+
+.process-text {
+  font-size: 16px; /* Slightly smaller font for better fit */
+  font-weight: 600; /* Made text bolder */
+  margin-top: 15px; /* Space between icon and text */
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 180px; /* Fixed width to match parent */
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.process-connector {
+  flex-grow: 1;
+  height: 3px; /* Slightly thicker line */
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+  background-size: 16px 3px; /* Adjusted for thicker line */
+  background-repeat: repeat-x;
+  margin: 0 40px; /* Further increased horizontal margin for more gap */
+  max-width: 180px; /* Increased max width */
+}
+
+/* Main Content */
+.how-we-work-heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.how-we-work-description {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 1100px;
+  margin-bottom: 50px;
+}
+
+.how-we-work-steps {
+  width: 100%;
+  text-align: justify;
+  max-width: 1100px;
+
+}
+
+.how-we-work-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.how-we-work-row:last-child {
+  margin-bottom: 0;
+}
+
+.how-we-work-step {
+  flex: 0 0 48%;
+}
+
+.step-number {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .how-we-work-section {
+    padding: 70px 35px;
+  }
+  
+  .how-we-work-heading {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  
+  .how-we-work-description {
+    font-size: 16px;
+    margin-bottom: 45px;
+  }
+  
+  .process-step {
+    width: 160px;
+  }
+  
+  .process-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .process-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .process-text {
+    font-size: 15px;
+    width: 160px;
+  }
+  
+  .process-connector {
+    max-width: 120px;
+    margin: 0 30px;
+  }
+  
+  .step-description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .how-we-work-section {
+    padding: 60px 30px;
+  }
+  
+  .how-we-work-heading {
+    font-size: 32px;
+  }
+  
+  .how-we-work-row {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .how-we-work-step {
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+  }
+  
+  .how-we-work-step:last-child {
+    margin-bottom: 0;
+  }
+  
+  .process-connector {
+    max-width: 80px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .how-we-work-section {
+    padding: 50px 20px;
+  }
+  
+  .how-we-work-process {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+  .process-step {
+    margin-bottom: 30px;
+  }
+  
+  .process-step:last-child {
+    margin-bottom: 0;
+  }
+  
+  .process-connector {
+    width: 2px;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background-size: 2px 16px;
+    margin: 0;
+  }
+  
+  .how-we-work-heading {
+    font-size: 28px;
+  }
+  
+  .how-we-work-description {
+    font-size: 15px;
+  }
+  
+  .step-number {
+    font-size: 18px;
+  }
+  
+  .step-description {
+    font-size: 15px;
+  }
+}

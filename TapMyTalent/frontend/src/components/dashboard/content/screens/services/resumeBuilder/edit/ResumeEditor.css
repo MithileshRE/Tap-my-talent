@@ -1,0 +1,551 @@
+.resume-editor-container {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.resume-editor-container {
+  box-sizing: border-box;
+}
+
+/* Only apply box-sizing to our editor components, not the template */
+.resume-editor-content, 
+.resume-editor-main-wrapper, 
+.resume-editor-left-panel, 
+.resume-editor-main-content, 
+.resume-editor-form-container, 
+.resume-preview {
+  box-sizing: border-box;
+}
+
+.resume-editor-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.resume-editor-main-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.resume-editor-left-panel {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  border-right: 1px solid transparent;
+}
+
+.resume-editor-header {
+  display: flex;
+  align-items: center;
+  padding: 0 0 20px 0;
+  margin-bottom: 10px;
+}
+
+.resume-editor-header-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: none;
+}
+
+.editor-back-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .editor-back-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editor-back-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.editor-back-icon {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .editor-back-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editor-back-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.resume-editor-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.resume-editor-main-content {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  border: none;
+}
+
+.resume-editor-form-container {
+  flex: 1;
+  padding: 0 30px 20px 30px;
+  min-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .resume-editor-form-container {
+    padding: 0 20px 15px 20px;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-editor-form-container {
+    padding: 0 15px 10px 15px;
+  }
+}
+
+.resume-editor-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding: 20px 0;
+  align-items: center;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Position context for steps */
+.resume-editor-steps {
+  position: relative; /* Ensure positioning context */
+}
+
+/* Dashed line connecting step dots - fixed approach */
+.step-line {
+  position: absolute;
+  /* Fixed measurements based on the exact step layout */
+  top: 30px; /* Align with center of first dot */
+  height: 350px; /* Fine-tuned to reach exactly to the last step-dot */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  /* Create dashed line effect */
+  background-image: linear-gradient(to bottom, #ddd 50%, transparent 50%);
+  background-size: 2px 10px;
+  background-repeat: repeat-y;
+  z-index: 0;
+}
+
+@media (max-width: 992px) {
+  .step-line {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+    background-image: linear-gradient(to right, #ddd 50%, transparent 50%);
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+  }
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .step-dot {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.step-indicator.active .step-dot {
+  background-color: #E66868;
+  transform: scale(1.2);
+}
+
+.step-indicator.completed .step-dot {
+  background-color: #4CAF50;
+}
+
+.step-indicator:hover {
+  background-color: #f5f5f5;
+}
+
+.step-label {
+  display: none;
+}
+
+.step-indicator.active .step-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.resume-editor-form {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.resume-preview {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  border-left: 1px solid #eee;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+/* Resume preview header with zoom button */
+.resume-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.template-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.zoom-button {
+  background-color: #e66868;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.zoom-button:hover {
+  background-color: #d55252;
+}
+
+/* Template container */
+.template-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  overflow: visible;
+  max-height: none;
+  padding: 20px 0 0 0;
+}
+
+/* Ensure the resume template styles are not affected by our editor styles */
+.resume-preview-container {
+  /* Explicitly reset any inherited styles that might affect the template */
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: content-box;
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  transform-origin: top center;
+}
+
+.preview-title {
+  display: none;
+}
+
+.resume-template-preview {
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Zoom modal */
+.zoom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoom-modal-content {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+  max-height: 90vh;
+  position: relative;
+  overflow: auto;
+  padding: 20px;
+}
+
+.zoom-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e66868;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.zoom-modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 20px 0;
+}
+
+.coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .resume-editor-content {
+    height: auto;
+  }
+  
+  .resume-editor-main-wrapper {
+    flex-direction: column;
+  }
+  
+  .resume-editor-left-panel {
+    width: 100%;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .resume-editor-header-bar {
+    height: 50px;
+  }
+  
+  .resume-editor-steps {
+    width: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .resume-editor-steps::before {
+    top: auto;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .resume-editor-main-content {
+    flex-direction: column;
+  }
+  
+  .resume-editor-form-container {
+    max-width: 100%;
+  }
+  
+  .resume-preview {
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+  
+  .step-indicator {
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+  
+  .zoom-modal-content {
+    width: 95%;
+    height: 95%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-editor-header {
+    margin-bottom: 0;
+  }
+  
+  .resume-editor-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .resume-template-preview {
+    height: 400px;
+  }
+  
+  .resume-editor-steps {
+    gap: 15px;
+  }
+  
+  .step-indicator {
+    margin-right: 10px;
+  }
+  
+  .zoom-button {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .zoom-modal-close {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-editor-header-bar {
+    height: 40px;
+    padding: 0 15px;
+  }
+  
+  .resume-editor-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .resume-editor-steps {
+    gap: 10px;
+    padding: 8px 0;
+  }
+  
+  .step-indicator {
+    margin-right: 8px;
+  }
+  
+  .resume-template-preview {
+    height: 350px;
+    padding: 5px;
+  }
+  
+  .template-info {
+    font-size: 10px;
+  }
+  
+  .zoom-button {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .zoom-modal-content {
+    padding: 10px;
+  }
+  
+  .zoom-modal-close {
+    width: 24px;
+    height: 24px;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .zoom-modal-body {
+    padding: 10px 0;
+  }
+  
+  .coming-soon {
+    height: 200px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .resume-editor-form-container {
+    padding: 0 10px 10px 10px;
+  }
+  
+  .resume-template-preview {
+    height: 300px;
+  }
+  
+  .step-dot {
+    width: 12px;
+    height: 12px;
+  }
+}

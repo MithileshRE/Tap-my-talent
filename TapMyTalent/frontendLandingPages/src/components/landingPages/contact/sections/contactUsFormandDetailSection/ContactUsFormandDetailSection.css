@@ -1,0 +1,32 @@
+.contact-us-form-and-detail-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.contact-us-form-and-detail-section-container {
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 4rem);
+    padding: clamp(2rem, 4vw, 4rem);
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Tablet and smaller desktop screens */
+@media (max-width: 1200px) {
+    .contact-us-form-and-detail-section-container {
+        padding: clamp(1.5rem, 3vw, 2rem);
+        gap: 2rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .contact-us-form-and-detail-section-container {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 2rem;
+    }
+}

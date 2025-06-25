@@ -1,0 +1,368 @@
+/* Classic Resume Template - A4 size */
+.tmt-classic-resume-preview-container {
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  transform-origin: top center;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tmt-classic-resume-container {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 10mm;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  position: relative;
+}
+
+/* Header Section */
+.tmt-classic-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.tmt-classic-name {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.tmt-classic-contact-info {
+  font-size: 13px;
+}
+
+.tmt-classic-contact-row {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tmt-classic-separator {
+  margin: 0 6px;
+}
+
+.tmt-classic-highlight {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+/* Section Styling */
+.tmt-classic-section {
+  margin-bottom: 10px;
+}
+
+.tmt-classic-section-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+
+.tmt-classic-section-content {
+  padding: 3px 0;
+}
+
+/* Objective Section */
+.tmt-classic-objective-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* Education Section */
+.tmt-classic-education-item {
+  margin-bottom: 6px;
+}
+
+.tmt-classic-education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tmt-classic-education-degree {
+  font-size: 13px;
+}
+
+.tmt-classic-degree-title {
+  font-weight: bold;
+}
+
+.tmt-classic-institution {
+  font-style: normal;
+}
+
+.tmt-classic-education-year {
+  font-size: 13px;
+  text-align: right;
+}
+
+.tmt-classic-education-details {
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+.tmt-classic-education-details p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Skills Section */
+.tmt-classic-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 4px;
+  margin-bottom: 3px;
+}
+
+.tmt-classic-skills-category {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.tmt-classic-skills-list {
+  font-size: 13px;
+}
+
+/* Experience Section */
+.tmt-classic-experience-item {
+  margin-bottom: 8px;
+}
+
+.tmt-classic-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1px;
+}
+
+.tmt-classic-experience-title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.tmt-classic-experience-company {
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+
+.tmt-classic-experience-date-location {
+  text-align: right;
+  font-size: 13px;
+}
+
+.tmt-classic-experience-location {
+  font-style: italic;
+}
+
+.tmt-classic-experience-description {
+  margin-top: 2px;
+}
+
+.tmt-classic-experience-description ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.tmt-classic-experience-description li {
+  font-size: 13px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  position: relative;
+  padding-left: 0;
+}
+
+.tmt-classic-experience-description li::marker {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Projects Section */
+.tmt-classic-project-item {
+  margin-bottom: 6px;
+}
+
+.tmt-classic-project-title {
+  font-weight: bold;
+  font-size: 13px;
+  display: inline;
+}
+
+.tmt-classic-project-description {
+  font-size: 13px;
+  display: inline;
+  margin-left: 5px;
+  line-height: 1.4;
+}
+
+.tmt-classic-project-link {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+/* Activities Section */
+.tmt-classic-activities-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.tmt-classic-activities-list li {
+  font-size: 13px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  position: relative;
+  padding-left: 0;
+}
+
+.tmt-classic-activities-list li::marker {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Leadership Section */
+.tmt-classic-leadership-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.tmt-classic-leadership-list li {
+  font-size: 13px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  position: relative;
+  padding-left: 0;
+}
+
+.tmt-classic-leadership-list li::marker {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Print button */
+.tmt-classic-print-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tmt-classic-print-btn:hover {
+  background-color: #45a049;
+}
+
+/* Media Query for Print */
+@media print {
+  .tmt-classic-resume-preview-container {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    height: 297mm;
+    transform: scale(1) !important;
+  }
+  
+  .tmt-classic-print-btn {
+    display: none !important;
+  }
+}
+
+
+/* Ensure scaling is clean on screen */
+@media screen {
+  .tmt-classic-resume-container {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+}
+
+/* More Details Section */
+.tmt-classic-details-category {
+  margin-bottom: 8px;
+}
+
+.tmt-classic-subsection-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+}
+
+.tmt-classic-certifications-list,
+.tmt-classic-awards-list,
+.tmt-classic-volunteer-list,
+.tmt-classic-additional-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.tmt-classic-certifications-list li,
+.tmt-classic-awards-list li,
+.tmt-classic-volunteer-list li,
+.tmt-classic-additional-list li {
+  font-size: 13px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  position: relative;
+  padding-left: 0;
+}
+
+.tmt-classic-certifications-list li::marker,
+.tmt-classic-awards-list li::marker,
+.tmt-classic-volunteer-list li::marker,
+.tmt-classic-additional-list li::marker {
+  color: #333;
+  font-size: 14px;
+}
+
+.tmt-classic-cert-title,
+.tmt-classic-award-title,
+.tmt-classic-volunteer-title {
+  font-weight: bold;
+}
+
+/* Print-friendly setup */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tmt-classic-resume-container {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: none;
+    padding: 20mm;
+    margin: 0;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Hide print button */
+  .print-button {
+    display: none !important;
+  }
+}

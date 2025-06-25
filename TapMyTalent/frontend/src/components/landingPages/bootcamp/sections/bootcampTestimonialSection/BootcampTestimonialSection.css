@@ -1,0 +1,121 @@
+/* Main section styles */
+.bootcamp-testimonial-section {
+  width: 100%;
+  padding: 50px 8%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bootcamp-testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bootcamp-testimonial-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.bootcamp-testimonial-highlight {
+  color: #E66868;
+}
+
+.bootcamp-testimonial-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* Card styles */
+.bootcamp-testimonial-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bootcamp-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.bootcamp-testimonial-pin {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.bootcamp-testimonial-pin img {
+  width: 100%;
+  height: auto;
+}
+
+.bootcamp-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bootcamp-testimonial-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.bootcamp-testimonial-role {
+  font-size: 14px;
+  font-weight: 400;
+  color: #060C0E;
+  margin-bottom: 15px;
+}
+
+.bootcamp-testimonial-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #060C0E;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .bootcamp-testimonial-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bootcamp-testimonial-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bootcamp-testimonial-section {
+    padding: 40px 5%;
+  }
+  
+  .bootcamp-testimonial-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .bootcamp-testimonial-card {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

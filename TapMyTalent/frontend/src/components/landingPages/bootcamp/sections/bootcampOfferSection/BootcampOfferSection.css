@@ -1,0 +1,187 @@
+/* Main section styles */
+.bootcamp-offer-section {
+  width: 100%;
+  padding: 50px 8%;
+  background-color: #FFFFFF;
+}
+
+.bootcamp-offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bootcamp-offer-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.bootcamp-offer-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Card styles */
+.bootcamp-offer-card {
+  position: relative;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.bootcamp-offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for cards coming from left */
+.bootcamp-offer-card-left {
+  animation-name: slideInFromLeft;
+  animation-timing-function: ease-out;
+}
+
+/* Animation for cards coming from right */
+.bootcamp-offer-card-right {
+  animation-name: slideInFromRight;
+  animation-timing-function: ease-out;
+}
+
+/* Stagger the animations based on rows */
+/* First row */
+.bootcamp-offer-card:nth-child(1) { animation-delay: 0.1s; }
+.bootcamp-offer-card:nth-child(2) { animation-delay: 0.1s; }
+.bootcamp-offer-card:nth-child(3) { animation-delay: 0.1s; }
+.bootcamp-offer-card:nth-child(4) { animation-delay: 0.1s; }
+/* Second row */
+.bootcamp-offer-card:nth-child(5) { animation-delay: 0.3s; }
+.bootcamp-offer-card:nth-child(6) { animation-delay: 0.3s; }
+.bootcamp-offer-card:nth-child(7) { animation-delay: 0.3s; }
+.bootcamp-offer-card:nth-child(8) { animation-delay: 0.3s; }
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bootcamp-offer-card-icon {
+  margin-bottom: 15px;
+}
+
+.bootcamp-offer-card-icon img {
+  width: 30px;
+  height: auto;
+}
+
+.bootcamp-offer-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.bootcamp-offer-card-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #060C0E;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .bootcamp-offer-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Adjust animations for 3-column layout */
+  /* First column from left */
+  .bootcamp-offer-card:nth-child(3n+1) {
+    animation-name: slideInFromLeft;
+  }
+  /* Second column from center */
+  .bootcamp-offer-card:nth-child(3n+2) {
+    animation-name: slideInFromBottom;
+  }
+  /* Third column from right */
+  .bootcamp-offer-card:nth-child(3n) {
+    animation-name: slideInFromRight;
+  }
+}
+
+@media (max-width: 992px) {
+  .bootcamp-offer-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Adjust animations for 2-column layout */
+  /* Left column */
+  .bootcamp-offer-card:nth-child(2n+1) {
+    animation-name: slideInFromLeft;
+  }
+  /* Right column */
+  .bootcamp-offer-card:nth-child(2n) {
+    animation-name: slideInFromRight;
+  }
+}
+
+@media (max-width: 576px) {
+  .bootcamp-offer-section {
+    padding: 40px 5%;
+  }
+  
+  .bootcamp-offer-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .bootcamp-offer-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* All cards slide from bottom in single column layout */
+  .bootcamp-offer-card {
+    animation-name: slideInFromBottom !important;
+  }
+}
+
+/* Add slide from bottom animation for medium screens */
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

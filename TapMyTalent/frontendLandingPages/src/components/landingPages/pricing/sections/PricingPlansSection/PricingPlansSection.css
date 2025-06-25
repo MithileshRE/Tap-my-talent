@@ -1,0 +1,275 @@
+.pricing-plans-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.pricing-plans-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-plans-heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pricing-plans-subheading {
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.pricing-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.toggle-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin: 0 10px;
+}
+
+.toggle-label.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch.ha-active {
+  background-color: #F05454;
+}
+
+.toggle-slider {
+  width: 26px;
+  height: 26px;
+  background-color: #F05454;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-switch.ha-active .toggle-slider {
+  transform: translateX(30px);
+  background-color: #ffffff;
+}
+
+.pricing-plans-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Plan Card Styles */
+.pricing-plan-card {
+  flex: 1;
+  max-width: 350px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-plan-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.pricing-plan-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.price-currency {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.price-amount {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+  margin-right: 10px;
+}
+
+.price-old {
+  font-size: 18px;
+  font-weight: 400;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pricing-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+  
+}
+
+.pricing-plan-feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.feature-icon {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.pricing-plan-feature.included .feature-icon {
+  color: #F05454;
+}
+
+.pricing-plan-feature.not-included .feature-icon {
+  color: #999;
+}
+
+.pricing-plan-feature.included .feature-text {
+  color: #000000;
+}
+
+.pricing-plan-feature.not-included .feature-text {
+  color: #999;
+}
+
+.pricing-plan-button {
+  background-color: #F05454;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.pricing-plan-button:hover {
+  background-color: #e04040;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .pricing-plans-section {
+    padding: 70px 0;
+  }
+  
+  .pricing-plans-heading {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  
+  .pricing-plans-subheading {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .pricing-plans-grid {
+    gap: 25px;
+  }
+  
+  .pricing-plan-card {
+    padding: 25px;
+  }
+  
+  .pricing-plan-title {
+    font-size: 22px;
+  }
+  
+  .price-amount {
+    font-size: 36px;
+  }
+  
+  .pricing-plan-feature {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-plans-section {
+    padding: 60px 0;
+  }
+  
+  .pricing-plans-heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-plans-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-plan-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-plans-section {
+    padding: 40px 0;
+  }
+  
+  .pricing-plans-heading {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .pricing-plan-title {
+    font-size: 20px;
+  }
+  
+  .price-amount {
+    font-size: 32px;
+  }
+  
+  .pricing-plan-feature {
+    font-size: 14px;
+  }
+}

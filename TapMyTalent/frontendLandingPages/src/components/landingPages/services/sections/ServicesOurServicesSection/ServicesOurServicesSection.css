@@ -1,0 +1,248 @@
+.services-our-services-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 8%;
+}
+
+.services-our-services-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.services-our-services-heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e1e1e;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-our-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+}
+
+.services-our-services-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.content-image {
+  flex-direction: row;
+  transform: translateX(-50px);
+}
+
+.image-content {
+  flex-direction: row-reverse;
+  transform: translateX(50px);
+}
+
+/* Animation classes */
+.services-our-services-item.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Add keyframes for animations */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.services-our-services-content {
+  flex: 0 0 48%;
+  text-align: justify;
+}
+
+.services-our-services-item-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 5px 0;
+}
+
+.services-our-services-item-description {
+  color: #000000;
+}
+
+.services-our-services-item-description p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.services-our-services-item-description ul {
+  padding-left: 0;
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+.services-our-services-item-description li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 25px;
+}
+
+.services-our-services-item-description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #F05454;
+  border-radius: 50%;
+}
+
+.services-our-services-item-description strong {
+  font-weight: 600;
+}
+
+.services-our-services-image {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-our-services-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .services-our-services-section {
+    padding: 60px 8%;
+  }
+  
+  .services-our-services-heading {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  
+  .services-our-services-list {
+    gap: 70px;
+  }
+  
+  .services-our-services-item {
+    gap: 35px;
+  }
+  
+  .services-our-services-item-title {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+  
+  .services-our-services-item-description p {
+    font-size: 16px;
+  }
+  
+  .services-our-services-item-description li {
+    font-size: 15px;
+    padding-left: 22px;
+  }
+  
+  .services-our-services-item-description li::before {
+    width: 7px;
+    height: 7px;
+    top: 7px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-our-services-section {
+    padding: 50px 8%;
+  }
+
+  .services-our-services-heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .services-our-services-item {
+    flex-direction: column;
+    gap: 20px;
+    /* Reset horizontal transforms for mobile and use vertical instead */
+    transform: translateY(30px);
+  }
+  
+  /* Override horizontal transforms with vertical for mobile */
+  .content-image,
+  .image-content {
+    transform: translateY(30px);
+  }
+  
+  /* Adjust animation for mobile */
+  .services-our-services-item.animate {
+    transform: translateY(0);
+  }
+  
+  .services-our-services-content {
+    order: 2;
+  }
+  
+  .services-our-services-image {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  
+  .services-our-services-item-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .services-our-services-item-description p {
+    font-size: 15px;
+  }
+  
+  .services-our-services-item-description li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-our-services-section {
+    padding: 50px 8%;
+  }
+  
+  .services-our-services-heading {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .services-our-services-list {
+    gap: 40px;
+  }
+  
+  .services-our-services-item-title {
+    font-size: 18px;
+  }
+}

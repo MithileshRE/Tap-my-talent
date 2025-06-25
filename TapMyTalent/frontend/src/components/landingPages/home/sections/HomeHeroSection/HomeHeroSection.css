@@ -1,0 +1,211 @@
+.home-hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 732px;
+    min-height: 600px; /* Minimum height for smaller screens */
+    background-color: #111111; /* Dark background */
+    color: #fff;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home-hero-content {
+    max-width: 50%;
+    padding: 20px;
+  }
+  
+  .home-hero-content h1 {
+    font-size: 40px; /* Adjust based on design */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .home-hero-content h1 span {
+    color: #E66868; /* Pink color for "Faster" */
+  }
+  
+  .home-hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .home-hero-section-features {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+  
+  .home-hero-section-feature {
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-hero-section-feature::before {
+   gap: 0px ;
+  }
+  
+  .home-hero-section-cta-button {
+    background-color: #ff4d4d; /* Pink button */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-hero-section-cta-button:hover {
+    background-color: #e04343; /* Slightly darker pink on hover */
+  }
+  
+  .home-hero-section-image {
+    max-width: 40%;
+  }
+  
+  .home-hero-section-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  /* Large devices (desktops, less than 1200px) */
+  @media (max-width: 1200px) {
+    .home-hero-section {
+      padding: 0 5%;
+    }
+    
+    .home-hero-content h1 {
+      font-size: 36px;
+    }
+    
+    .home-hero-content p {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 992px) {
+    .home-hero-section {
+      height: auto;
+      min-height: 550px;
+      padding: 60px 5%;
+    }
+    
+    .home-hero-content {
+      max-width: 55%;
+    }
+    
+    .home-hero-content h1 {
+      font-size: 32px;
+    }
+    
+    .home-hero-section-feature {
+      font-size: 16px;
+    }
+    
+    .home-hero-section-cta-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+    
+    .home-hero-section-image {
+      max-width: 42%;
+    }
+  }
+
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 768px) {
+    .home-hero-section {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .home-hero-content {
+      max-width: 100%;
+      background-position: center !important;
+    }
+
+    .home-hero-content h1 {
+      font-size: 28px;
+    }
+
+    .home-hero-content p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .home-hero-section-features {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .home-hero-section-feature {
+      justify-content: center;
+    }
+
+    .home-hero-section-image {
+      max-width: 85%;
+      margin-top: 30px;
+    }
+    
+    .home-hero-section-cta-button {
+      margin: 10px auto;
+      display: block;
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+
+  /* Extra small devices (phones, less than 576px) */
+  @media (max-width: 576px) {
+    .home-hero-section {
+      padding: 30px 15px;
+    }
+    
+    .home-hero-content {
+      padding: 10px;
+    }
+    
+    .home-hero-content h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .home-hero-content p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    
+    .home-hero-section-feature {
+      font-size: 14px;
+    }
+    
+    .home-hero-section-feature img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+    
+    .home-hero-section-cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+    
+    .home-hero-section-image {
+      max-width: 95%;
+      margin-top: 25px;
+    }
+  }

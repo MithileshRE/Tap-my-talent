@@ -1,0 +1,268 @@
+.tmt-professional-resume-preview-container {
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  transform-origin: top center;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0 auto;
+}
+
+.tmt-professional-resume-container {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+  margin: auto;
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.4;
+  position: relative;
+  font-size: 10pt;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.tmt-professional-header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -15mm -15mm 10px -15mm; /* Extend to full width */
+}
+
+.tmt-professional-profile h1 {
+  font-size: 1.8rem;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tmt-professional-profile .tmt-professional-title {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 300;
+  color: #fff;
+}
+
+.tmt-professional-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 5px;
+  font-size: 0.85rem;
+}
+
+.tmt-professional-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tmt-professional-contact-item i {
+  width: 16px;
+  text-align: center;
+  color: #3498db;
+}
+
+/* Section Styling */
+.tmt-professional-section {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 6px;
+}
+
+.tmt-professional-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Use more specific selectors to prevent conflicts with other headings */
+.tmt-professional-resume-container .tmt-professional-section h2 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+}
+
+.tmt-professional-section-content {
+  padding-left: 3px;
+  font-size: 0.85rem;
+}
+
+/* About Section */
+.tmt-professional-about-section p {
+  margin: 0;
+  text-align: justify;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Experience Section */
+.tmt-professional-experience-item, .tmt-professional-education-item {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.tmt-professional-experience-item:last-child, .tmt-professional-education-item:last-child {
+  margin-bottom: 0;
+}
+
+.tmt-professional-experience-header, .tmt-professional-education-item {
+  margin-bottom: 5px;
+}
+
+.tmt-professional-resume-container .tmt-professional-experience-header h3, 
+.tmt-professional-resume-container .tmt-professional-education-item h3 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  display: inline;
+}
+
+.tmt-professional-company, .tmt-professional-institution {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 0.95rem;
+  display: inline;
+  margin-left: 5px;
+}
+
+.tmt-professional-location, .tmt-professional-date, .tmt-professional-subject {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-bottom: 2px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tmt-professional-experience-description ul {
+  padding-left: 15px;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.tmt-professional-experience-description li {
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+}
+
+/* Education Section styles are covered in the shared styles above */
+
+/* Skills Section */
+.tmt-professional-skills-section .tmt-professional-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tmt-professional-skills-category {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 10px;
+}
+
+.tmt-professional-resume-container .tmt-professional-skills-category h3 {
+  color: #3498db;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.tmt-professional-skills-list {
+  list-style-type: none;
+  columns: 2;
+}
+
+.tmt-professional-skills-list li {
+  margin-bottom: 2px;
+  position: relative;
+  padding-left: 12px;
+  font-size: 0.8rem;
+  break-inside: avoid;
+}
+
+.tmt-professional-skills-list li::before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+/* More Details Section */
+.tmt-professional-more-details-section .tmt-professional-section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tmt-professional-details-category {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 8px;
+}
+
+.tmt-professional-details-category:last-child {
+  margin-bottom: 0;
+}
+
+.tmt-professional-resume-container .tmt-professional-details-category h3 {
+  color: #3498db;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.tmt-professional-details-category ul {
+  list-style-type: none;
+  padding-left: 3px;
+}
+
+.tmt-professional-details-category li {
+  margin-bottom: 2px;
+  position: relative;
+  padding-left: 12px;
+  font-size: 0.8rem;
+}
+
+.tmt-professional-details-category li::before {
+  content: "→";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+/* Print Styles */
+@media print {
+  .tmt-professional-resume-preview-container {
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    transform: none !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tmt-professional-resume-container {
+    padding: 10mm;
+    margin: 0;
+    overflow: hidden;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .tmt-professional-header {
+    margin: -10mm -10mm 10px -10mm;
+  }
+  
+  .tmt-professional-section {
+    page-break-inside: avoid;
+  }
+  
+  .tmt-professional-print-btn {
+    display: none !important;
+  }
+}

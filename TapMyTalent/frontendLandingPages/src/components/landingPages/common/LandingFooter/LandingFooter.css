@@ -1,0 +1,155 @@
+.footer {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.footer-container {
+    background: #111111;
+    padding: clamp(20px, 4vw, 30px) clamp(15px, 10vw, 160px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(30px, 10vw, 180px);
+    box-sizing: border-box;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.footer-about {
+    max-width: 400px;
+}
+
+.footer h3 {
+    font-size: 28px;
+    margin-bottom: clamp(15px, 2vw, 20px);
+}
+
+.footer-description {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: clamp(6px, 1vw, 8px);
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e0e0e0;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer-social-icon .footer-contact-icon {
+    width: clamp(10px, 1.5vw, 12px);
+}
+
+.footer-social-icon {
+    padding: 0 !important;
+}
+
+.footer-bottom {
+    padding: clamp(15px, 2vw, 20px) 0;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer-container {
+        gap: clamp(30px, 4vw, 60px);
+    }
+    
+    .footer h3 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-container {
+        gap: clamp(20px, 3vw, 40px);
+    }
+    
+    .footer-about {
+        max-width: 300px;
+    }
+    
+    .footer h3 {
+        font-size: 24px;
+    }
+    
+    .footer-description,
+    .footer-links a,
+    .footer-contact p,
+    .footer-bottom {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: clamp(20px, 3vw, 30px);
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-description {
+        margin-bottom: clamp(15px, 2vw, 20px);
+    }
+    
+    .footer h3 {
+        font-size: 22px;
+    }
+    
+    .footer-description,
+    .footer-links a,
+    .footer-contact p,
+    .footer-bottom {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .footer h3 {
+        font-size: 20px;
+    }
+    
+    .footer-description,
+    .footer-links a,
+    .footer-contact p,
+    .footer-bottom {
+        font-size: 12px;
+    }
+}

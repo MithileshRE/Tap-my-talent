@@ -1,0 +1,59 @@
+.bootcamp-and-cources-section {
+    padding: 50px 8%;
+    background-color: #000;
+}
+
+.bootcamp-and-cources-container {
+    /* padding: 4rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bootcamp-and-cources-title {
+    text-align: center;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: clamp(32px, 5vw, 40px);
+    font-weight: 700;
+    margin: 0;
+}
+
+.bootcamp-and-cources-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .bootcamp-and-cources-container {
+        padding: 3.5rem 1.5rem;
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bootcamp-and-cources-container {
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .bootcamp-and-cources-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bootcamp-and-cources-container {
+        padding: 2.5rem 0.75rem;
+    }
+
+    .bootcamp-and-cources-cards {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}

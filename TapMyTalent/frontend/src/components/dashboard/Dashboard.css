@@ -1,0 +1,75 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #F1F1F1;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.dashboard-content {
+  flex: 1;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: auto;  padding: 20px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* This class will be applied to Content when sidebar is hidden */
+.content-expanded {
+  margin-left: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .dashboard-body {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .dashboard-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .dashboard-content.mobile-view {
+    margin-top: 0;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard-body {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .dashboard-content {
+    padding: 15px;
+  }
+}

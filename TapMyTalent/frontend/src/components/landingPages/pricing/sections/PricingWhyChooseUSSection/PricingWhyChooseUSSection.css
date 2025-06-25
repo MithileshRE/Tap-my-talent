@@ -1,0 +1,132 @@
+.pricing-why-choose-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.pricing-why-choose-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-why-choose-heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing-why-choose-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.pricing-why-choose-reasons {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.pricing-why-choose-reason {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pricing-why-choose-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-why-choose-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.pricing-why-choose-reason-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.pricing-why-choose-reason-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .pricing-why-choose-section {
+    padding: 60px 0;
+  }
+  
+  .pricing-why-choose-heading {
+    font-size: 36px;
+  }
+  
+  .pricing-why-choose-description {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-why-choose-reasons {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .pricing-why-choose-reason {
+    max-width: 500px;
+  }
+  
+  .pricing-why-choose-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-why-choose-section {
+    padding: 50px 0;
+  }
+  
+  .pricing-why-choose-heading {
+    font-size: 28px;
+  }
+  
+  .pricing-why-choose-description {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .pricing-why-choose-reason-title {
+    font-size: 18px;
+  }
+  
+  .pricing-why-choose-reason-description {
+    font-size: 14px;
+  }
+}

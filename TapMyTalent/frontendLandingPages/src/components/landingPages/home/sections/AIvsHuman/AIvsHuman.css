@@ -1,0 +1,172 @@
+/* AIvsHuman Section Styles */
+.ai-vs-human-section {
+  background-color: #ffffff;
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ai-vs-human-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ai-vs-human-heading {
+  font-weight: 700;
+  font-size: 40px;
+  color: #232323;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.ai-vs-human-description {
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+  text-align: justify;
+  max-width: 900px;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+.ai-vs-human-comparison {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  text-align: justify;
+}
+
+.ai-vs-human-column {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ai-vs-human-topic {
+  font-weight: 600;
+  font-size: 24px;
+  color: #232323;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.ai-vs-human-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ai-vs-human-feature {
+  font-weight: 400;
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.ai-vs-human-feature:last-child {
+  margin-bottom: 0;
+}
+
+.ai-vs-human-feature:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #FF6B6B;
+}
+
+.ai-vs-human-feature strong {
+  font-weight: 600;
+  color: #232323;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .ai-vs-human-section {
+    padding: 70px 35px;
+  }
+  
+  .ai-vs-human-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .ai-vs-human-description {
+    font-size: 16px;
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+  
+  .ai-vs-human-comparison {
+    gap: 30px;
+  }
+  
+  .ai-vs-human-column {
+    padding: 25px;
+  }
+  
+  .ai-vs-human-topic {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .ai-vs-human-feature {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ai-vs-human-section {
+    padding: 60px 30px;
+  }
+  
+  .ai-vs-human-heading {
+    font-size: 32px;
+  }
+  
+  .ai-vs-human-description {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .ai-vs-human-comparison {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .ai-vs-human-column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ai-vs-human-section {
+    padding: 40px 20px;
+  }
+  
+  .ai-vs-human-heading {
+    font-size: 28px;
+  }
+  
+  .ai-vs-human-description {
+    font-size: 15px;
+  }
+  
+  .ai-vs-human-topic {
+    font-size: 20px;
+  }
+  
+  .ai-vs-human-feature {
+    font-size: 15px;
+  }
+}

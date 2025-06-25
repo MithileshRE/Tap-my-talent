@@ -1,0 +1,152 @@
+.bootcamp-join-section {
+    background-color: #fff;
+}
+
+.bootcamp-join-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.bootcamp-join-title {
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.bootcamp-join-title span {
+    color: #E66868;
+}
+
+.bootcamp-join-stamps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.stamp-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.stamp-box:hover {
+    transform: scale(1.05);
+}
+
+.stamp-box-image {
+    width: 180px;
+    height: 180px;
+}
+
+.stamp-box-title {
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #E66868;
+    margin: 1rem 0 0.5rem;
+}
+
+.stamp-box-subtitle {
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .bootcamp-join-stamps {
+        gap: 8rem;
+    }
+
+    .stamp-box-image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .bootcamp-join-container {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .bootcamp-join-title {
+        font-size: 32px;
+        margin-bottom: 2.5rem;
+    }
+
+    .stamp-box-title {
+        font-size: 28px;
+    }
+
+    .stamp-box-subtitle {
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .bootcamp-join-container {
+        padding: 2.5rem 1rem;
+    }
+
+    .bootcamp-join-title {
+        font-size: 36px;
+        margin-bottom: 2.5rem;
+    }
+
+    .bootcamp-join-stamps {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .stamp-box {
+        width: 100%;
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+
+    .stamp-box-image {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bootcamp-join-container {
+        padding: 2rem 0.8rem;
+    }
+
+    .bootcamp-join-title {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .stamp-box-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .stamp-box-title {
+        font-size: 24px;
+    }
+
+    .stamp-box-subtitle {
+        font-size: 18px;
+    }
+}

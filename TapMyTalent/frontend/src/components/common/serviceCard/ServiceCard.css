@@ -1,0 +1,172 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 24px;
+  width: 340px;
+  height: 140px;
+  background: #F1F1F1;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .service-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    min-width: 250px;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 16px;
+    height: 130px;
+  }
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #F5F5F5;
+  transform: translateY(-3px);
+}
+
+
+
+.service-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.service-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+.service-card-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .service-card-description {
+    max-width: 100%;
+  }
+}
+
+.service-card-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.service-card-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.service-card-icon i {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Styles for the arrow icon at the bottom of the card when a link is present */
+.service-card-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-arrow img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Add some padding to the bottom of cards with links to make room for the arrow */
+.service-card.with-link {
+  padding-bottom: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card-title {
+    font-size: 15px;
+  }
+  
+  .service-card-description {
+    font-size: 13px;
+  }
+  
+  .service-card-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .service-card-icon img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card-title {
+    font-size: 14px;
+  }
+  
+  .service-card-description {
+    font-size: 12px;
+  }
+  
+  .service-card-arrow {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .service-card-arrow img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Link styling */
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card-link:focus {
+  outline: none;
+}
+
+.service-card-link:focus .service-card {
+  box-shadow: 0 0 0 2px #0066CC;
+}

@@ -1,0 +1,35 @@
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(36px, 4vw, 50px);
+    padding: 0 clamp(12px, 2vw, 24px);
+    background: #E66868;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: clamp(4px, 0.6vw, 6px);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 clamp(2px, 0.4vw, 4px) clamp(3px, 0.6vw, 6px) rgba(106, 13, 173, 0.1);
+}
+
+/* Optional: Additional fine-tuning for specific breakpoints if needed */
+@media (max-width: 480px) {
+    .custom-button {
+        /* Any specific mobile adjustments if needed */
+        transform: scale(0.98);
+    }
+    
+    .custom-button:hover {
+        transform: scale(1) translateY(-1px);
+    }
+}

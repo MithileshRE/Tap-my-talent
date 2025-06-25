@@ -1,0 +1,65 @@
+.candidate-success-section {
+    padding: 50px 8%;
+    background-color: #fff;
+}
+
+.candidates-success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.candidates-success-title {
+    font-family: Poppins, sans-serif;
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 16rem;
+}
+
+.recent-companies-desktop {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.recent-companies-mobile {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .candidates-success-title {
+        font-family: Poppins, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .recent-companies-desktop {
+        display: none;
+    }
+    
+    .recent-companies-mobile {
+        display: block;
+    }
+    
+    .candidates-success-title {
+        font-family: Poppins, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .candidate-success-section {
+        padding: 20px;
+    }
+}

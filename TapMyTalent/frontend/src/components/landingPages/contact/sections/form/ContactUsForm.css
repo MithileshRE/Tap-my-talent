@@ -1,0 +1,225 @@
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Poppins, sans-serif;
+    max-width: 800px;
+    width: 100%;
+}
+
+.contact-us-form h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 600;
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+.form-group {
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: clamp(0.75rem, 2vw, 1rem);
+    border: none;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group textarea[name="message"] {
+    height: clamp(200px, 30vh, 250px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #8833FF;
+    background-color: #fff;
+}
+
+.submit-btn {
+    background: #E66868;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(14px, 2vw, 16px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #5731ED 0%, #6A0DAD 100%);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Placeholder styles */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Focus styles for better accessibility */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid #8833FF;
+    outline-offset: 1px;
+}
+
+.message-box {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: clamp(14px, 2vw, 16px);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.message-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Phone input styles */
+.phone-input {
+    width: 100%;
+}
+
+.phone-input .react-tel-input {
+    width: 100%;
+}
+
+.phone-input .react-tel-input .form-control {
+    width: 100% !important;
+    height: auto;
+    padding-left: 50px !important;
+    padding: clamp(0.75rem, 2vw, 1rem);
+    border: none;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: all 0.3s ease;
+}
+
+.phone-input .react-tel-input .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #8833FF;
+    background-color: #fff;
+}
+
+.phone-input .react-tel-input .selected-flag {
+    width: 42px;
+    padding: 0 0 0 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.phone-input .react-tel-input .flag-dropdown {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.phone-input .react-tel-input .flag-dropdown.open {
+    background-color: #fff;
+}
+
+.phone-input .react-tel-input .flag-dropdown:hover,
+.phone-input .react-tel-input .flag-dropdown:focus {
+    background-color: #fff;
+}
+
+.phone-input .react-tel-input .selected-flag {
+    background-color: transparent;
+    border-radius: 8px 0 0 8px;
+}
+
+.phone-input .react-tel-input .selected-flag:hover,
+.phone-input .react-tel-input .selected-flag:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.phone-input .react-tel-input .country-list {
+    border-radius: 8px;
+    margin-top: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.phone-input .react-tel-input .country-list .search {
+    background-color: white;
+    padding: 10px;
+}
+
+.phone-input .react-tel-input .country-list .search input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.phone-input .react-tel-input .country-list .search input:focus {
+    outline: none;
+    border-color: #8833FF;
+}
+
+.error-message.phone-error {
+    color: #721c24;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgba(248, 215, 218, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-us-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us-form {
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}

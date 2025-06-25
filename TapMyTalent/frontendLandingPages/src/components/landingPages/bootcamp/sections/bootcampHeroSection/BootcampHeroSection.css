@@ -1,0 +1,124 @@
+.bootcamp-hero-section {
+    /* min-height: 100vh; */
+    height: 619px;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 50px 8%;
+    background-color: #111111;
+}
+
+.bootcamp-hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.bootcamp-hero-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    flex: 1;
+    min-width: 0;
+}
+
+.bootcamp-hero-title {
+    font-family: Poppins, sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.bootcamp-hero-title span {
+    color: #E66868;
+}
+
+.bootcamp-hero-subtitle {
+    font-family: Poppins, sans-serif;
+    font-size: clamp(16px, 2.5vw, 18px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.bootcamp-hero-description {
+    font-family: Poppins, sans-serif;
+    font-size: clamp(14px, 1.8vw, 16px);
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.bootcamp-hero-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.bootcamp-hero-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .bootcamp-hero-section {
+        height: auto;
+        padding: 70px 8% 50px;
+    }
+    
+    .bootcamp-hero-title {
+        font-size: 32px;
+    }
+    
+    .bootcamp-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .bootcamp-hero-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bootcamp-hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: clamp(1.5rem, 3vw, 2rem);
+    }
+    
+    .bootcamp-hero-content {
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    .bootcamp-hero-description {
+        text-align: center;
+        max-width: 800px;
+    }
+    
+    .bootcamp-hero-images {
+        max-width: clamp(70%, 75vw, 90%);
+        margin-top: 2rem;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .bootcamp-hero-container {
+        gap: 1.5rem;
+    }
+    
+    .bootcamp-hero-content {
+        gap: 1rem;
+    }
+}
